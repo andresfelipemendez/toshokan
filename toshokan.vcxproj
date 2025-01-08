@@ -107,14 +107,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\andres\Development\toshokan\lib\mupdf\include;C:\Users\andres\Development\toshokan\lib\SDL3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\andres\Development\toshokan\lib\SDL3_ttf\include;C:\Users\andres\Development\toshokan\lib\mupdf\include;C:\Users\andres\Development\toshokan\lib\SDL3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\andres\Development\toshokan\lib\mupdf\lib;C:\Users\andres\Development\toshokan\lib\SDL3\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL3.lib;libmupdf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\andres\Development\toshokan\lib\SDL3_ttf\lib\x64;C:\Users\andres\Development\toshokan\lib\mupdf\lib;C:\Users\andres\Development\toshokan\lib\SDL3\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL3.lib;SDL3_ttf.lib;libmupdf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,6 +143,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clay.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="lib\SDL3_ttf\lib\x64\SDL3_ttf.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

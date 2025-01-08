@@ -21,6 +21,7 @@
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="lib\SDL3\lib\x64\SDL3.dll" />
+    <CopyFileToFolders Include="lib\SDL3_ttf\lib\x64\SDL3_ttf.dll" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clay.h">
